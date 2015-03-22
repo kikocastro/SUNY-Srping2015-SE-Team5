@@ -12,7 +12,7 @@
 namespace Symfony\Component\PropertyAccess;
 
 /**
- * A configurable builder to create a PropertyAccessor.
+ * A configurable builder for PropertyAccessorInterface objects.
  *
  * @author Jérémie Augustin <jeremie.augustin@pixel-cookers.com>
  */
@@ -53,7 +53,7 @@ class PropertyAccessorBuilder
     }
 
     /**
-     * @return bool whether the use of "__call" by the PropertyAccessor is enabled
+     * @return bool true if the use of "__call" by the PropertyAccessor is enabled
      */
     public function isMagicCallEnabled()
     {
@@ -61,10 +61,7 @@ class PropertyAccessorBuilder
     }
 
     /**
-     * Enables exceptions when reading a non-existing index.
-     *
-     * This has no influence on writing non-existing indices with PropertyAccessorInterface::setValue()
-     * which are always created on-the-fly.
+     * Enables exceptions in read context for array by PropertyAccessor
      *
      * @return PropertyAccessorBuilder The builder object
      */
@@ -76,9 +73,7 @@ class PropertyAccessorBuilder
     }
 
     /**
-     * Disables exceptions when reading a non-existing index.
-     *
-     * Instead, null is returned when calling PropertyAccessorInterface::getValue() on a non-existing index.
+     * Disables exceptions in read context for array by PropertyAccessor
      *
      * @return PropertyAccessorBuilder The builder object
      */
@@ -90,7 +85,7 @@ class PropertyAccessorBuilder
     }
 
     /**
-     * @return bool whether an exception is thrown or null is returned when reading a non-existing index
+     * @return bool true is exceptions in read context for array is enabled
      */
     public function isExceptionOnInvalidIndexEnabled()
     {
@@ -98,9 +93,9 @@ class PropertyAccessorBuilder
     }
 
     /**
-     * Builds and returns a new PropertyAccessor object.
+     * Builds and returns a new propertyAccessor object.
      *
-     * @return PropertyAccessorInterface The built PropertyAccessor
+     * @return PropertyAccessorInterface The built propertyAccessor
      */
     public function getPropertyAccessor()
     {

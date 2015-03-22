@@ -1,5 +1,4 @@
 <?php
-
 namespace Cocur\Slugify\Bridge\ZF2;
 
 use Cocur\Slugify\SlugifyInterface;
@@ -26,12 +25,6 @@ class SlugifyViewHelper extends AbstractHelper
         $this->slugify = $slugify;
     }
 
-    /**
-     * @param string $string
-     * @param string $separator
-     *
-     * @return string
-     */
     public function __invoke($string, $separator = '-')
     {
         return $this->slugify->slugify($string, $separator);

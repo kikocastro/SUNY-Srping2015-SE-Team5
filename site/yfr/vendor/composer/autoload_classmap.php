@@ -172,8 +172,6 @@ return array(
     'Bolt\\YamlUpdater' => $baseDir . '/src/YamlUpdater.php',
     'Cocur\\Slugify\\Bridge\\Laravel\\SlugifyFacade' => $vendorDir . '/cocur/slugify/src/Bridge/Laravel/SlugifyFacade.php',
     'Cocur\\Slugify\\Bridge\\Laravel\\SlugifyServiceProvider' => $vendorDir . '/cocur/slugify/src/Bridge/Laravel/SlugifyServiceProvider.php',
-    'Cocur\\Slugify\\Bridge\\Latte\\SlugifyHelper' => $vendorDir . '/cocur/slugify/src/Bridge/Latte/SlugifyHelper.php',
-    'Cocur\\Slugify\\Bridge\\Nette\\SlugifyExtension' => $vendorDir . '/cocur/slugify/src/Bridge/Nette/SlugifyExtension.php',
     'Cocur\\Slugify\\Bridge\\Silex\\SlugifyServiceProvider' => $vendorDir . '/cocur/slugify/src/Bridge/Silex/SlugifyServiceProvider.php',
     'Cocur\\Slugify\\Bridge\\Symfony\\CocurSlugifyBundle' => $vendorDir . '/cocur/slugify/src/Bridge/Symfony/CocurSlugifyBundle.php',
     'Cocur\\Slugify\\Bridge\\Symfony\\CocurSlugifyExtension' => $vendorDir . '/cocur/slugify/src/Bridge/Symfony/CocurSlugifyExtension.php',

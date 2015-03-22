@@ -211,25 +211,23 @@ class __TwigTemplate_60c665fccf8c2ffc6f8dce38eb7b42923e444d1f322e9504021602ae70e
 (isset($context["paths"]) ? $context["paths"] : null), "bolt", array()), "async" => $this->getAttribute(        // line 96
 (isset($context["paths"]) ? $context["paths"] : null), "async", array()), "app" => $this->getAttribute(        // line 97
 (isset($context["paths"]) ? $context["paths"] : null), "app", array()), "root" => $this->getAttribute(        // line 98
-(isset($context["paths"]) ? $context["paths"] : null), "root", array())), "uploadConfig" => array("maxSize" => $this->getAttribute($this->getAttribute(        // line 101
-(isset($context["app"]) ? $context["app"] : null), "filepermissions", array(), "array"), "getMaxUploadSize", array(), "method"), "maxSizeNice" => $this->getAttribute($this->getAttribute(        // line 102
-(isset($context["app"]) ? $context["app"] : null), "filepermissions", array(), "array"), "getMaxUploadSizeNice", array(), "method")), "ckeditor" => array("images" => (0 + $this->getAttribute(        // line 105
-(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/images"), "method")), "tables" => (0 + $this->getAttribute(        // line 106
-(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/tables"), "method")), "anchor" => (0 + $this->getAttribute(        // line 107
-(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/anchor"), "method")), "fontcolor" => (0 + $this->getAttribute(        // line 108
-(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/fontcolor"), "method")), "align" => (0 + $this->getAttribute(        // line 109
-(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/align"), "method")), "subsuper" => (0 + $this->getAttribute(        // line 110
-(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/subsuper"), "method")), "embed" => (0 + $this->getAttribute(        // line 111
-(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/embed"), "method")), "blockquote" => (0 + $this->getAttribute(        // line 112
-(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/blockquote"), "method")), "strike" => (0 + $this->getAttribute(        // line 113
-(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/strike"), "method")), "underline" => (0 + $this->getAttribute(        // line 114
-(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/underline"), "method")), "codesnippet" => (0 + $this->getAttribute(        // line 115
-(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/codesnippet"), "method")), "specialchar" => (0 + $this->getAttribute(        // line 116
-(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/specialchar"), "method")), "ck" => ((twig_test_iterable($this->getAttribute(        // line 117
-(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/ck"), "method"))) ? ($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/ck"), "method")) : (false)), "filebrowser" => ((twig_test_iterable($this->getAttribute(        // line 118
-(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/filebrowser"), "method"))) ? ($this->getAttribute(        // line 119
+(isset($context["paths"]) ? $context["paths"] : null), "root", array())), "ckeditor" => array("images" => (0 + $this->getAttribute(        // line 101
+(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/images"), "method")), "tables" => (0 + $this->getAttribute(        // line 102
+(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/tables"), "method")), "anchor" => (0 + $this->getAttribute(        // line 103
+(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/anchor"), "method")), "fontcolor" => (0 + $this->getAttribute(        // line 104
+(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/fontcolor"), "method")), "align" => (0 + $this->getAttribute(        // line 105
+(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/align"), "method")), "subsuper" => (0 + $this->getAttribute(        // line 106
+(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/subsuper"), "method")), "embed" => (0 + $this->getAttribute(        // line 107
+(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/embed"), "method")), "blockquote" => (0 + $this->getAttribute(        // line 108
+(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/blockquote"), "method")), "strike" => (0 + $this->getAttribute(        // line 109
+(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/strike"), "method")), "underline" => (0 + $this->getAttribute(        // line 110
+(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/underline"), "method")), "codesnippet" => (0 + $this->getAttribute(        // line 111
+(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/codesnippet"), "method")), "specialchar" => (0 + $this->getAttribute(        // line 112
+(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/specialchar"), "method")), "ck" => ((twig_test_iterable($this->getAttribute(        // line 113
+(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/ck"), "method"))) ? ($this->getAttribute((isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/ck"), "method")) : (false)), "filebrowser" => ((twig_test_iterable($this->getAttribute(        // line 114
+(isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/filebrowser"), "method"))) ? ($this->getAttribute(        // line 115
 (isset($context["config"]) ? $context["config"] : null), "get", array(0 => "general/wysiwyg/filebrowser"), "method")) : (false))));
-        // line 122
+        // line 118
         echo "<script src=\"";
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["paths"]) ? $context["paths"] : null), "app", array()), "html", null, true);
         echo "view/js/bolt.min.js\" data-config=\"";
@@ -239,14 +237,14 @@ class __TwigTemplate_60c665fccf8c2ffc6f8dce38eb7b42923e444d1f322e9504021602ae70e
         echo "\"></script>
 
 ";
-        // line 124
+        // line 120
         $this->displayBlock('page_script', $context, $blocks);
-        // line 126
+        // line 122
         echo "
 ";
-        // line 128
+        // line 124
         if ($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : null), "config", array()), "get", array(0 => "general/grunt/livereload"), "method")) {
-            // line 129
+            // line 125
             echo "    <script src=\"";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["paths"]) ? $context["paths"] : null), "hosturl", array()), "html", null, true);
             echo ":";
@@ -254,7 +252,7 @@ class __TwigTemplate_60c665fccf8c2ffc6f8dce38eb7b42923e444d1f322e9504021602ae70e
             echo "/livereload.js\"></script>
 ";
         }
-        // line 131
+        // line 127
         echo "
 </body>
 </html>
@@ -266,7 +264,7 @@ class __TwigTemplate_60c665fccf8c2ffc6f8dce38eb7b42923e444d1f322e9504021602ae70e
     {
     }
 
-    // line 124
+    // line 120
     public function block_page_script($context, array $blocks = array())
     {
     }
@@ -283,6 +281,6 @@ class __TwigTemplate_60c665fccf8c2ffc6f8dce38eb7b42923e444d1f322e9504021602ae70e
 
     public function getDebugInfo()
     {
-        return array (  270 => 124,  265 => 84,  258 => 131,  250 => 129,  248 => 128,  245 => 126,  243 => 124,  233 => 122,  231 => 119,  230 => 118,  229 => 117,  228 => 116,  227 => 115,  226 => 114,  225 => 113,  224 => 112,  223 => 111,  222 => 110,  221 => 109,  220 => 108,  219 => 107,  218 => 106,  217 => 105,  216 => 102,  215 => 101,  214 => 98,  213 => 97,  212 => 96,  211 => 95,  210 => 92,  209 => 89,  208 => 88,  207 => 86,  204 => 85,  202 => 84,  194 => 83,  186 => 77,  176 => 74,  167 => 73,  158 => 72,  149 => 71,  140 => 70,  137 => 69,  128 => 67,  124 => 66,  118 => 63,  111 => 59,  105 => 56,  98 => 54,  89 => 48,  86 => 47,  82 => 44,  78 => 42,  76 => 41,  73 => 40,  71 => 39,  69 => 38,  66 => 36,  62 => 34,  60 => 33,  57 => 32,  55 => 31,  53 => 30,  50 => 28,  48 => 25,  45 => 23,  41 => 21,  37 => 19,  35 => 18,  32 => 17,  30 => 16,  28 => 15,  26 => 14,  23 => 13,  21 => 12,);
+        return array (  268 => 120,  263 => 84,  256 => 127,  248 => 125,  246 => 124,  243 => 122,  241 => 120,  231 => 118,  229 => 115,  228 => 114,  227 => 113,  226 => 112,  225 => 111,  224 => 110,  223 => 109,  222 => 108,  221 => 107,  220 => 106,  219 => 105,  218 => 104,  217 => 103,  216 => 102,  215 => 101,  214 => 98,  213 => 97,  212 => 96,  211 => 95,  210 => 92,  209 => 89,  208 => 88,  207 => 86,  204 => 85,  202 => 84,  194 => 83,  186 => 77,  176 => 74,  167 => 73,  158 => 72,  149 => 71,  140 => 70,  137 => 69,  128 => 67,  124 => 66,  118 => 63,  111 => 59,  105 => 56,  98 => 54,  89 => 48,  86 => 47,  82 => 44,  78 => 42,  76 => 41,  73 => 40,  71 => 39,  69 => 38,  66 => 36,  62 => 34,  60 => 33,  57 => 32,  55 => 31,  53 => 30,  50 => 28,  48 => 25,  45 => 23,  41 => 21,  37 => 19,  35 => 18,  32 => 17,  30 => 16,  28 => 15,  26 => 14,  23 => 13,  21 => 12,);
     }
 }

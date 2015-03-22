@@ -9,7 +9,6 @@ use Bolt\Library as Lib;
 use Maid\Maid;
 use Silex;
 use Symfony\Component\Filesystem\Filesystem;
-use Symfony\Component\Routing\Exception\RouteNotFoundException;
 
 class Content implements \ArrayAccess
 {
@@ -537,18 +536,13 @@ class Content implements \ArrayAccess
         }
 
         // Make the 'key' of the array an absolute link to the taxonomy.
-        try {
-            $link = $this->app['url_generator']->generate(
-                'taxonomylink',
-                array(
-                    'taxonomytype' => $taxonomytype,
-                    'slug'         => $slug,
-                )
-            );
-        } catch (RouteNotFoundException $e) {
-            // Fallback to unique key (yes, also a broken link)
-            $link = $taxonomytype . '/' . $slug;
-        }
+        $link = $this->app['url_generator']->generate(
+            'taxonomylink',
+            array(
+                'taxonomytype' => $taxonomytype,
+                'slug'         => $slug,
+            )
+        );
 
         // Set the 'name', for displaying the pretty name, if there is any.
         if ($this->app['config']->get('taxonomy/' . $taxonomytype . '/options/' . $slug)) {
@@ -678,18 +672,12 @@ class Content implements \ArrayAccess
                     // Parse the field as Markdown, return HTML
                     $value = \ParsedownExtra::instance()->text($value);
 
-                    $config = $this->app['config']->get('general/htmlcleaner');
-                    $allowed_tags = !empty($config['allowed_tags']) ? $config['allowed_tags'] :
-                        array('div', 'p', 'br', 'hr', 's', 'u', 'strong', 'em', 'i', 'b', 'li', 'ul', 'ol', 'blockquote', 'pre', 'code', 'tt', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'dd', 'dl', 'dh', 'table', 'tbody', 'thead', 'tfoot', 'th', 'td', 'tr', 'a', 'img');
-                    $allowed_attributes = !empty($config['allowed_attributes']) ? $config['allowed_attributes'] :
-                        array('id', 'class', 'name', 'value', 'href', 'src');
-
                     // Sanitize/clean the HTML.
                     $maid = new Maid(
                         array(
                             'output-format'   => 'html',
-                            'allowed-tags'    => $allowed_tags,
-                            'allowed-attribs' => $allowed_attributes
+                            'allowed-tags'    => array('html', 'head', 'body', 'section', 'div', 'p', 'br', 'hr', 's', 'u', 'strong', 'em', 'i', 'b', 'li', 'ul', 'ol', 'menu', 'blockquote', 'pre', 'code', 'tt', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'dd', 'dl', 'dh', 'table', 'tbody', 'thead', 'tfoot', 'th', 'td', 'tr', 'a', 'img'),
+                            'allowed-attribs' => array('id', 'class', 'name', 'value', 'href', 'src')
                         )
                     );
                     $value = $maid->clean($value);
@@ -1175,7 +1163,7 @@ class Content implements \ArrayAccess
                 }
             }
 
-            $excerpt = implode(' ', $excerptParts);
+            $excerpt = str_replace('>', '> ', implode(' ', $excerptParts));
             $excerpt = Html::trimText(strip_tags($excerpt), $length);
         } else {
             $excerpt = '';

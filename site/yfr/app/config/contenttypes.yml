@@ -182,6 +182,24 @@ showcases:
     icon_many: "fa:cubes"
     icon_one: "fa:cube"
 
+carousel:
+    name: Carousel
+    singular_name: Carousel
+    fields:
+        title:
+            type: text
+            class: large
+            required: true
+        slug:
+            type: slug
+            uses: title
+        images:
+            type: imagelist
+    show_on_dashboard: false
+    default_status: published
+    searchable: false
+    viewless: true
+
 
 # possible field types:
 # text - varchar(256) - input type text.

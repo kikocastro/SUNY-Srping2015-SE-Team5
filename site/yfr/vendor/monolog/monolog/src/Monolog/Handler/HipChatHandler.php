@@ -118,7 +118,6 @@ class HipChatHandler extends SocketHandler
     {
         $dataArray = array(
             'from' => $this->name,
-            'room_id' => $this->room,
             'notify' => $this->notify,
             'message' => $record['formatted'],
             'message_format' => $this->format,
@@ -136,7 +135,7 @@ class HipChatHandler extends SocketHandler
      */
     private function buildHeader($content)
     {
-        $header = "POST /v1/rooms/message?format=json&auth_token=".$this->token." HTTP/1.1\r\n";
+        $header = "POST /v2/room/".$this->room."/notification?auth_token=".$this->token." HTTP/1.1\r\n";
         $header .= "Host: {$this->host}\r\n";
         $header .= "Content-Type: application/x-www-form-urlencoded\r\n";
         $header .= "Content-Length: " . strlen($content) . "\r\n";
@@ -235,19 +234,19 @@ class HipChatHandler extends SocketHandler
             }
 
             $messages[] = $record['message'];
-            $messageStr = implode(PHP_EOL, $messages);
+            $messgeStr = implode(PHP_EOL, $messages);
             $formattedMessages[] = $this->getFormatter()->format($record);
             $formattedMessageStr = implode('', $formattedMessages);
 
             $batchRecord = array(
-                'message'   => $messageStr,
+                'message'   => $messgeStr,
                 'formatted' => $formattedMessageStr,
                 'context'   => array(),
                 'extra'     => array(),
             );
 
             if (!$this->validateStringLength($batchRecord['formatted'], static::MAXIMUM_MESSAGE_LENGTH)) {
-                // Pop the last message and implode the remaining messages
+                // Pop the last message and implode the remainging messages
                 $lastMessage = array_pop($messages);
                 $lastFormattedMessage = array_pop($formattedMessages);
                 $batchRecord['message'] = implode(PHP_EOL, $messages);

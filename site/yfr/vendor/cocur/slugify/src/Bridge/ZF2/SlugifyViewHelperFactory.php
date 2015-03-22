@@ -1,5 +1,4 @@
 <?php
-
 namespace Cocur\Slugify\Bridge\ZF2;
 
 use Cocur\Slugify\Slugify;
@@ -15,7 +14,6 @@ class SlugifyViewHelperFactory
 {
     /**
      * @param HelperPluginManager $vhm
-     *
      * @return SlugifyViewHelper
      */
     public function __invoke($vhm)

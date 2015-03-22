@@ -68,15 +68,11 @@ class __TwigTemplate_65e5792cbd1ff9f66ad319a63320de4d01abbe79b575af50d34ac0c0383
 
 ";
         // line 34
-        echo "<div id=\"latestactivity\">
-    ";
-        // line 35
         echo $this->env->getExtension('silex')->render($this->env, $this->env->getExtension('routing')->getPath("latestactivity"));
         echo "
-</div>
 
 ";
-        // line 39
+        // line 37
         echo "<div id=\"latesttemp\" style=\"display:none; visibility: hidden;\">
     <!-- intentionally left blank -->
 </div>
@@ -95,6 +91,6 @@ class __TwigTemplate_65e5792cbd1ff9f66ad319a63320de4d01abbe79b575af50d34ac0c0383
 
     public function getDebugInfo()
     {
-        return array (  80 => 39,  74 => 35,  71 => 34,  66 => 31,  61 => 28,  56 => 25,  53 => 23,  41 => 13,  39 => 12,  32 => 7,  28 => 6,  24 => 4,  21 => 2,  19 => 1,);
+        return array (  76 => 37,  71 => 34,  66 => 31,  61 => 28,  56 => 25,  53 => 23,  41 => 13,  39 => 12,  32 => 7,  28 => 6,  24 => 4,  21 => 2,  19 => 1,);
     }
 }

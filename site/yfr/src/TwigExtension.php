@@ -476,21 +476,16 @@ class TwigExtension extends \Twig_Extension
         // Parse the field as Markdown, return HTML
         $output = \ParsedownExtra::instance()->text($content);
 
-        $config = $this->app['config']->get('general/htmlcleaner');
-        $allowed_tags = !empty($config['allowed_tags']) ? $config['allowed_tags'] :
-            array('div', 'p', 'br', 'hr', 's', 'u', 'strong', 'em', 'i', 'b', 'li', 'ul', 'ol', 'blockquote', 'pre', 'code', 'tt', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'dd', 'dl', 'dh', 'table', 'tbody', 'thead', 'tfoot', 'th', 'td', 'tr', 'a', 'img');
-        $allowed_attributes = !empty($config['allowed_attributes']) ? $config['allowed_attributes'] :
-            array('id', 'class', 'name', 'value', 'href', 'src');
         // Sanitize/clean the HTML.
         $maid = new \Maid\Maid(
             array(
                 'output-format'   => 'html',
-                'allowed-tags'    => $allowed_tags,
-                'allowed-attribs' => $allowed_attributes
+                'allowed-tags'    => array('html', 'head', 'body', 'section', 'div', 'p', 'br', 'hr', 's', 'u', 'strong', 'em', 'i', 'b', 'li', 'ul', 'ol', 'menu', 'blockquote', 'pre', 'code', 'tt', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'dd', 'dl', 'dh', 'table', 'tbody', 'thead', 'tfoot', 'th', 'td', 'tr', 'a', 'img'),
+                'allowed-attribs' => array('id', 'class', 'name', 'value', 'href', 'src')
             )
         );
         $output = $maid->clean($output);
-        
+
         return $output;
     }
 
@@ -751,10 +746,6 @@ class TwigExtension extends \Twig_Extension
         $finder->files()
                ->in($this->app['paths']['templatespath'])
                ->notname('/^_/')
-               ->notPath('node_modules')
-               ->notPath('bower_components')
-               ->notPath('.sass-cache')
-               ->depth('<2')
                ->path($name)
                ->sortByName();
 
@@ -1280,7 +1271,7 @@ class TwigExtension extends \Twig_Extension
                             $item['link'] = $content->link();
                         }
                     } else {
-                        $item['link'] = $this->app['request']->getBasePath() . '/' . $path;
+                        $item['link'] = '/' . $path;
                     }
                 } catch (ResourceNotFoundException $e) {
                     $this->app['logger.system']->error(Trans::__('Invalid menu path (%PATH%) set in menu.yml. Does not match any configured contenttypes or routes.', array('%PATH%' => $item['path'])), array('event' => 'config'));

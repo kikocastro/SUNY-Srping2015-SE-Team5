@@ -1,0 +1,41 @@
+sliders:
+    name: Sliders
+    singular_name: Slider
+    description: |
+      The **Slider** contenttype can be used for the sliders on your site.
+    fields:
+        title:
+            type: text
+            class: large
+            group: content
+        template:
+            type: templateslider
+            filter: '*.twig'
+    relations:
+        slides:
+            multiple: true
+            order: title
+            label: Select zero or more slides
+
+slides:
+    name: Slides
+    singular_name: Slides
+    description: |
+      The **Slides** contenttype can be used for the sliders on your site.
+    fields:
+        title:
+            type: text
+            class: large
+            group: content
+        html:
+            type: html
+            height: 150px
+        video:
+            type: video
+        image:
+            type: image
+            attrib: title
+            extensions: [ gif, jpg, png ]
+        template:
+            type: templateslide
+            filter: '*.twig'

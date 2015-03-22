@@ -1,3 +1,3 @@
-1426873331
+1426997501
 a:1:{s:11:"information";O:8:"stdClass":11:{s:2:"id";s:2:"31";s:4:"slug";s:17:"bolt-213-released";s:11:"datecreated";s:19:"2015-03-18 12:09:56";s:11:"datechanged";s:19:"2015-03-18 12:10:43";s:8:"username";s:0:"";s:6:"status";s:9:"published";s:5:"title";s:20:"Bolt 2.1.3 released.";s:6:"teaser";s:314:"<p>In the week-and-a-half since the release of Bolt 2.1.0, we've resolved some more issues, quirks and bugs that have been discovered. We've even managed to squeeze in a couple of smaller new features in this release, too! If you've bumped into any annoyances with 2.1.0, please upgrade to <b>Bolt 2.1.3</b>.
 </p>";s:4:"link";s:44:"https://bolt.cm/newsitem/bolt-2-1-3-released";s:4:"type";s:4:"news";s:14:"target_version";s:0:"";}}

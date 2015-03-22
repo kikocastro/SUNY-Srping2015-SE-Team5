@@ -62,9 +62,9 @@ class Slugify implements SlugifyInterface
         'ċ' => 'c',
         '©' => 'c',
         'Ð' => 'Dj',
-        'Đ' => 'D',
+        'Đ' => 'Dj',
         'ð' => 'dj',
-        'đ' => 'd',
+        'đ' => 'dj',
         'È' => 'E',
         'É' => 'E',
         'Ê' => 'E',
@@ -532,130 +532,9 @@ class Slugify implements SlugifyInterface
         'Ỵ' => 'Y',
         'Ỷ' => 'Y',
         'Ỹ' => 'Y',
-
-        // burmese consonants
-        'က'     => 'k',
-        'ခ'     => 'kh',
-        'ဂ'     => 'g',
-        'ဃ'     => 'ga',
-        'င'     => 'ng',
-        'စ'     => 's',
-        'ဆ'     => 'sa',
-        'ဇ'     => 'z',
-        'စျ'    => 'za',
-        'ည'     => 'ny',
-        'ဋ'     => 't',
-        'ဌ'     => 'ta',
-        'ဍ'     => 'd',
-        'ဎ'     => 'da',
-        'ဏ'     => 'na',
-        'တ'     => 't',
-        'ထ'     => 'ta',
-        'ဒ'     => 'd',
-        'ဓ'     => 'da',
-        'န'     => 'n',
-        'ပ'     => 'p',
-        'ဖ'     => 'pa',
-        'ဗ'     => 'b',
-        'ဘ'     => 'ba',
-        'မ'     => 'm',
-        'ယ'     => 'y',
-        'ရ'     => 'ya',
-        'လ'     => 'l',
-        'ဝ'     => 'w',
-        'သ'     => 'th',
-        'ဟ'     => 'h',
-        'ဠ'     => 'la',
-        'အ'     => 'a',
-        // consonant character combos
-        'ြ'     => 'y',
-        'ျ'     => 'ya',
-        'ွ'     => 'w',
-        'ြွ'    => 'yw',
-        'ျွ'    => 'ywa',
-        'ှ'     => 'h',
-        // independent vowels
-        'ဧ'     => 'e',
-        '၏'     => '-e',
-        'ဣ'     => 'i',
-        'ဤ'     => '-i',
-        'ဉ'     => 'u',
-        'ဦ'     => '-u',
-        'ဩ'     => 'aw',
-        'သြော'  => 'aw',
-        'ဪ'     => 'aw',
-        '၍'     => 'ywae',
-        '၌'     => 'hnaik',
-        // numbers
-        '၀'     => '0',
-        '၁'     => '1',
-        '၂'     => '2',
-        '၃'     => '3',
-        '၄'     => '4',
-        '၅'     => '5',
-        '၆'     => '6',
-        '၇'     => '7',
-        '၈'     => '8',
-        '၉'     => '9',
-        // virama and tone marks which are silent in transliteration
-        '္'     => '',
-        '့'     => '',
-        'း'     => '',
-        // dependent vowels
-        'ာ'     => 'a',
-        'ါ'     => 'a',
-        'ေ'     => 'e',
-        'ဲ'     => 'e',
-        'ိ'     => 'i',
-        'ီ'     => 'i',
-        'ို'    => 'o',
-        'ု'     => 'u',
-        'ူ'     => 'u',
-        'ေါင်'  => 'aung',
-        'ော'    => 'aw',
-        'ော်'   => 'aw',
-        'ေါ'    => 'aw',
-        'ေါ်'   => 'aw',
-        '်'     => 'at',
-        'က်'    => 'et',
-        'ိုက်'  => 'aik',
-        'ောက်'  => 'auk',
-        'င်'    => 'in',
-        'ိုင်'  => 'aing',
-        'ောင်'  => 'aung',
-        'စ်'    => 'it',
-        'ည်'    => 'i',
-        'တ်'    => 'at',
-        'ိတ်'   => 'eik',
-        'ုတ်'   => 'ok',
-        'ွတ်'   => 'ut',
-        'ေတ်'   => 'it',
-        'ဒ်'    => 'd',
-        'ိုဒ်'  => 'ok',
-        'ုဒ်'   => 'ait',
-        'န်'    => 'an',
-        'ာန်'   => 'an',
-        'ိန်'   => 'ein',
-        'ုန်'   => 'on',
-        'ွန်'   => 'un',
-        'ပ်'    => 'at',
-        'ိပ်'   => 'eik',
-        'ုပ်'   => 'ok',
-        'ွပ်'   => 'ut',
-        'န်ုပ်' => 'nub',
-        'မ်'    => 'an',
-        'ိမ်'   => 'ein',
-        'ုမ်'   => 'on',
-        'ွမ်'   => 'un',
-        'ယ်'    => 'e',
-        'ိုလ်'  => 'ol',
-        'ဉ်'    => 'in',
-        'ံ'     => 'an',
-        'ိံ'    => 'ein',
-        'ုံ'    => 'on'
     );
 
-    /** @var array<string,string>[] */
+    /** @var string[][] */
     protected $rulesets = array(
         'esperanto' => array(
             'ĉ' => 'cx',
@@ -720,7 +599,7 @@ class Slugify implements SlugifyInterface
     /**
      * Adds multiple rules to Slugify.
      *
-     * @param array<string,string> $rules
+     * @param string[][] $rules
      *
      * @return Slugify
      */
@@ -754,8 +633,8 @@ class Slugify implements SlugifyInterface
     /**
      * Adds a ruleset to Slugify.
      *
-     * @param string               $name  Name of the ruleset.
-     * @param array<string,string> $rules Rules
+     * @param string     $name  Name of the ruleset.
+     * @param string[][] $rules Rules
      *
      * @return Slugify
      */
@@ -769,7 +648,7 @@ class Slugify implements SlugifyInterface
     /**
      * Returns the rulesets.
      *
-     * @return array<integer,array<string,string>> Rulesets
+     * @return string[][] Rulesets
      */
     public function getRulesets()
     {

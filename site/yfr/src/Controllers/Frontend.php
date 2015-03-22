@@ -25,6 +25,29 @@ use utilphp\util;
 class Frontend
 {
     /**
+     * Perform contenttype-based permission check, aborting with a 403
+     * Forbidden as appropriate.
+     *
+     * @param \Silex\Application $app     The application/container
+     * @param Content|string     $content The content to check
+     */
+    protected function checkFrontendPermission(Silex\Application $app, $content)
+    {
+        if ($app['config']->get('general/frontend_permission_checks')) {
+            if ($content instanceof Content) {
+                $contenttypeslug = $content->contenttype['slug'];
+                $contentid = $content['id'];
+            } else {
+                $contenttypeslug = (string) $content;
+                $contentid = null;
+            }
+            if (!$app['users']->isAllowed('frontend', $contenttypeslug, $contentid)) {
+                $app->abort(403, 'Not allowed.');
+            }
+        }
+    }
+
+    /**
      * The default before filter for the controllers in this file.
      *
      * Refer to the routing.yml config file for overridding.
@@ -91,6 +114,10 @@ class Frontend
             $app['twig']->addGlobal($content->contenttype['singular_slug'], $content);
         }
 
+        if (!empty($record)) {
+            $this->checkFrontendPermission($app, $record);
+        }
+
         return $this->render($app, $template, 'homepage');
     }
 
@@ -127,12 +154,14 @@ class Frontend
             $content = $app['storage']->getContent($contenttype['slug'], array('id' => $slug, 'returnsingle' => true));
         }
 
+        $this->checkFrontendPermission($app, $content);
+
         // No content, no page!
         if (!$content) {
             // There's one special edge-case we check for: if the request is for the backend, without trailing
             // slash and it is intercepted by custom routing, we forward the client to that location.
             if ($slug == trim($app['config']->get('general/branding/path'), '/')) {
-                return Lib::redirect('dashboard');
+                Lib::simpleredirect($app['config']->get('general/branding/path') . '/');
             }
             $app->abort(404, "Page $contenttypeslug/$slug not found.");
         }
@@ -171,6 +200,8 @@ class Frontend
         // First, get the preview from Post.
         $content = $app['storage']->getContentObject($contenttypeslug);
         $content->setFromPost($request->request->all(), $contenttype);
+
+        $this->checkFrontendPermission($app, $content);
 
         // Then, select which template to use, based on our 'cascading templates rules'
         $template = $app['templatechooser']->record($content);
@@ -220,6 +251,7 @@ class Frontend
         $amount = (!empty($contenttype['listing_records']) ? $contenttype['listing_records'] : $app['config']->get('general/listing_records'));
         $order = (!empty($contenttype['sort']) ? $contenttype['sort'] : $app['config']->get('general/listing_sort'));
         $content = $app['storage']->getContent($contenttype['slug'], array('limit' => $amount, 'order' => $order, 'page' => $page, 'paging' => true));
+        $this->checkFrontendPermission($app, $contenttype['slug']);
 
         $template = $app['templatechooser']->listing($contenttype);
 

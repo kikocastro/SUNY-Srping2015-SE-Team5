@@ -1,5 +1,4 @@
 <?php
-
 namespace Cocur\Slugify\Bridge\ZF2;
 
 use Zend\ModuleManager\Feature\ServiceProviderInterface;
@@ -19,7 +18,7 @@ class Module implements ServiceProviderInterface, ViewHelperProviderInterface
      * Expected to return \Zend\ServiceManager\Config object or array to
      * seed such an object.
      *
-     * @return array<string,array<string,string>>
+     * @return array
      */
     public function getServiceConfig()
     {
@@ -37,7 +36,7 @@ class Module implements ServiceProviderInterface, ViewHelperProviderInterface
      * Expected to return \Zend\ServiceManager\Config object or array to
      * seed such an object.
      *
-     * @return array<string,array<string,string>>|\Zend\ServiceManager\Config
+     * @return array|\Zend\ServiceManager\Config
      */
     public function getViewHelperConfig()
     {

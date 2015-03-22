@@ -260,7 +260,7 @@ class SlackHandler extends SocketHandler
     }
 
     /**
-     * Stringifies an array of key/value pairs to be used in attachment fields
+     * Stringifys an array of key/value pairs to be used in attachment fields
      *
      * @param array $fields
      * @access protected

@@ -1,0 +1,27 @@
+{
+	"name" : "gregbiv/bolt-extension-revolution-slider",
+	"description" : "Slider Revolution is an all-purpose slide displaying solution that allows for showing almost any kind of content with highly customizable, transitions, effects and custom animations. Due to its visual oriented interface and countless options, Slider Revolution is suited for beginners and pro’s alike!",
+	"type" : "bolt-extension",
+	"keywords" : [
+		"Themepunch",
+		"revolution",
+		"slider"
+	],
+	"require" : {
+		"bolt/bolt" : ">=2.0.0,<3.0.0"
+	},
+	"license" : "GPL-3.0+",
+	"authors" : [{
+			"name" : "Gregory Kornienko",
+			"email" : "gregbiv@gmail.com"
+		}
+	],
+	"autoload" : {
+		"files" : [
+			"init.php"
+		],
+		"psr-4" : {
+			"Bolt\\Extension\\Bolt\\RevolutionSlider\\" : ""
+		}
+	}
+}
