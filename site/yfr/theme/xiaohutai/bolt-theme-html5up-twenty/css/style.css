@@ -10,7 +10,7 @@
 /* Basic */
 
 	body, #skel-layers-wrapper {
-		background: #f3f6fa;
+		background: #ffffff;
 	}
 
 	body.is-loading * {
@@ -41,7 +41,7 @@
 		-o-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-		color: #3fb1a3;
+		color: #48AFE3;
 		text-decoration: none;
 		border-bottom: dotted 1px;
 	}
@@ -59,7 +59,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: inherit;
+		color: #48AFE3;
 		font-weight: 300;
 		line-height: 1.75em;
 		margin-bottom: 1em;
@@ -505,7 +505,7 @@
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 		background: none;
 		border: solid 1px;
-		color: inherit;
+		color: #48AFE3;
 		cursor: pointer;
 		display: inline-block;
 		font-size: 0.8em;
@@ -524,15 +524,15 @@
 		input[type="reset"]:hover,
 		.button:hover {
 			background: rgba(188, 202, 206, 0.15);
-			border-color: inherit;
+			border-color: #48AFE3;
 		}
 
 		input[type="button"].special,
 		input[type="submit"].special,
 		input[type="reset"].special,
 		.button.special {
-			background: #83d3c9;
-			border-color: #83d3c9;
+			background: #48AFE3;
+			border-color: #48AFE3;
 			color: white !important;
 		}
 
@@ -540,8 +540,8 @@
 			input[type="submit"].special:hover,
 			input[type="reset"].special:hover,
 			.button.special:hover {
-				background: #96dad1 !important;
-				border-color: #96dad1 !important;
+				background: #A6D7FD !important;
+				border-color: #A6D7FD !important;
 			}
 
 		input[type="button"].fit,
@@ -572,7 +572,7 @@
 		}
 
 		.wrapper.style2 {
-			background-color: #83d3c9;
+			background-color: #48AFE3;
 			background-image: url("images/light-bl.svg"), url("images/light-br.svg");
 			background-position: bottom left, bottom right;
 			background-repeat: no-repeat, no-repeat;
@@ -859,10 +859,6 @@
 /* Main */
 
 	#main {
-		background-image: url("images/dark-tl.svg"), url("images/dark-tr.svg"), url("images/dark-bl.svg"), url("images/dark-br.svg");
-		background-position: top left, top right, bottom left, bottom right;
-		background-repeat: no-repeat;
-		background-size: 25em;
 		padding: 7em 0;
 	}
 

@@ -29,7 +29,6 @@
     },
     "require": {
         "bolt/bootstrap-carousel": "~2.0",
-        "gregbiv/bolt-extension-revolution-slider": "dev-master",
         "xiaohutai/bolt-theme-html5up-twenty": "0.2.*"
     }
 }

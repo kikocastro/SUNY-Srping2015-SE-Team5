@@ -6,7 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Bolt\\Extension\\Bolt\\RevolutionSlider\\' => array($vendorDir . '/gregbiv/bolt-extension-revolution-slider'),
     'Bolt\\Extension\\Bolt\\BootstrapCarousel\\' => array($vendorDir . '/bolt/bootstrap-carousel'),
     'Bolt\\Composer\\' => array($baseDir . '/'),
 );

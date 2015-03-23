@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "32dfe177b8f812d547cdee2004add1ae",
+    "hash": "5d5ae69ea86e51a58aaf1abb1a034eb1",
     "packages": [
         {
             "name": "bolt/bootstrap-carousel",
@@ -54,53 +54,6 @@
             "time": "2015-03-20 07:58:46"
         },
         {
-            "name": "gregbiv/bolt-extension-revolution-slider",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/gregbiv/bolt-extension-revolution-slider.git",
-                "reference": "112891cfb4235299fff052da168072010b61af63"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/gregbiv/bolt-extension-revolution-slider/zipball/112891cfb4235299fff052da168072010b61af63",
-                "reference": "112891cfb4235299fff052da168072010b61af63",
-                "shasum": ""
-            },
-            "require": {
-                "bolt/bolt": ">=2.0.0,<3.0.0"
-            },
-            "type": "bolt-extension",
-            "autoload": {
-                "files": [
-                    "init.php"
-                ],
-                "psr-4": {
-                    "Bolt\\Extension\\Bolt\\RevolutionSlider\\": ""
-                }
-            },
-            "license": [
-                "GPL-3.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Gregory Kornienko",
-                    "email": "gregbiv@gmail.com"
-                }
-            ],
-            "description": "Slider Revolution is an all-purpose slide displaying solution that allows for showing almost any kind of content with highly customizable, transitions, effects and custom animations. Due to its visual oriented interface and countless options, Slider Revolution is suited for beginners and pro’s alike!",
-            "keywords": [
-                "Themepunch",
-                "revolution",
-                "slider"
-            ],
-            "support": {
-                "source": "https://github.com/gregbiv/bolt-extension-revolution-slider/tree/master",
-                "issues": "https://github.com/gregbiv/bolt-extension-revolution-slider/issues"
-            },
-            "time": "2014-11-26 12:02:40"
-        },
-        {
             "name": "xiaohutai/bolt-theme-html5up-twenty",
             "version": "0.2",
             "source": {
@@ -148,9 +101,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "gregbiv/bolt-extension-revolution-slider": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],

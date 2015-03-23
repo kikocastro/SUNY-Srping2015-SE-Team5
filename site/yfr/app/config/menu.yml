@@ -6,7 +6,7 @@ main:
     path: homepage
     class: first
   - label: About Us
-    path:
+    path: page/5
   - label: Get Involved
     path: 
     submenu:

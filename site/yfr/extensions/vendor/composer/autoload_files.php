@@ -7,5 +7,4 @@ $baseDir = dirname($vendorDir);
 
 return array(
     $vendorDir . '/bolt/bootstrap-carousel/init.php',
-    $vendorDir . '/gregbiv/bolt-extension-revolution-slider/init.php',
 );

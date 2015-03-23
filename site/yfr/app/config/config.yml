@@ -305,9 +305,6 @@ extensions:
 # plain HTTP).
 # enforce_ssl: true
 
-myslider:
-    content: carousel/1
-
 # If configured, Bolt will trust X-Forwarded-XXX headers from the listed IP
 # addresses and ranges when determining whether the current request is
 # 'secure'.
