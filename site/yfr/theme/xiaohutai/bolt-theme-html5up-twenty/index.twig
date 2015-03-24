@@ -6,8 +6,8 @@
 
         {% block banner %}
             <section id="banner">
-                <div class="inner">
-                    <header>
+                {# <div class="inner"> #}
+                   {#  <header>
                         <h2>{{ app.config.get('general/sitename') }}</h2>
                     </header>
                     {% if theme.home.description is not empty %}<p>{{ theme.home.description|nl2br }}</p>{% endif %}
@@ -15,8 +15,8 @@
                         <ul class="buttons vertical">
                             <li><a href="#main" class="button fit scrolly">{{ theme.home.more }}</a></li>
                         </ul>
-                    </footer>
-                </div>
+                    </footer> #}
+                {# </div> #}
             </section>
         {% endblock banner %}
 

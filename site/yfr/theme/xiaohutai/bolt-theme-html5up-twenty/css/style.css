@@ -43,7 +43,7 @@
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 		color: #48AFE3;
 		text-decoration: none;
-		border-bottom: dotted 1px;
+		/*border-bottom: dotted 1px;*/
 	}
 
 		a:hover {
@@ -620,7 +620,7 @@
 		cursor: default;
 		font-size: 0.8em;
 		left: 0;
-		padding: 1em 1.5em;
+		padding: 1em 1.5em 0.5em;
 		position: fixed;
 		top: 0;
 		width: 100%;
@@ -641,7 +641,7 @@
 			position: absolute;
 			right: 1.5em;
 			text-transform: uppercase;
-			top: 0.75em;
+			top: 1.5em;
 		}
 
 			#header nav ul li {
@@ -715,7 +715,7 @@
 			background: transparent;
 			box-shadow: none;
 			color: white;
-			padding: 2em 2.5em;
+			padding: 1em 2.5em;
 			position: absolute;
 		}
 
@@ -727,6 +727,14 @@
 				#header.alt nav ul li.active > a, #header.alt nav ul li:hover > a {
 					border: solid 1px;
 				}
+
+			#header.reveal a.no-underline {
+				color: rgba(0, 0, 0, 0) !important;
+			}
+
+			#header.alt.reveal a img {
+				width: 140px;
+			}
 
 /* Dropotron */
 
@@ -747,7 +755,7 @@
 		}
 
 			.dropotron.level-0:before {
-				border-bottom: solid 0.5em #fff;
+				/*border-bottom: solid 0.5em #fff;*/
 				border-left: solid 0.5em transparent;
 				border-right: solid 0.5em transparent;
 				content: '';
@@ -773,7 +781,7 @@
 			}
 
 			.dropotron > li:hover > a {
-				background: #83d3c9;
+				background: #A6D7FD;
 				color: white;
 			}
 
