@@ -1,8 +1,0 @@
-<div data-revolution data-options="{{ dataoptions }}">
-    {% for image in images %}
-        <li>
-            <img alt="{{ image['title'] }}" src="{{ app.paths['files'] ~ image['filename'] }}">
-            <div>{{ image['title'] }}</div>
-        </li>
-    {% endfor %}
-</div>
