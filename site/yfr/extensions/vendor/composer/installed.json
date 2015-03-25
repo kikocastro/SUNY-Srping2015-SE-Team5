@@ -1,0 +1,97 @@
+[
+    {
+        "name": "bolt/bootstrap-carousel",
+        "version": "v2.0.0",
+        "version_normalized": "2.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/GawainLynch/bolt-extension-bootstrap-carousel.git",
+            "reference": "5e4a9eb243ce09868f7bde6b88914bea09c86271"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/GawainLynch/bolt-extension-bootstrap-carousel/zipball/5e4a9eb243ce09868f7bde6b88914bea09c86271",
+            "reference": "5e4a9eb243ce09868f7bde6b88914bea09c86271",
+            "shasum": ""
+        },
+        "require": {
+            "bolt/bolt": ">=2.0.0,<3.0.0"
+        },
+        "time": "2015-03-20 07:58:46",
+        "type": "bolt-extension",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "init.php"
+            ],
+            "psr-4": {
+                "Bolt\\Extension\\Bolt\\BootstrapCarousel\\": ""
+            }
+        },
+        "license": [
+            "GPL-3.0+"
+        ],
+        "authors": [
+            {
+                "name": "Gawain Lynch",
+                "email": "gawain.lynch@gmail.com"
+            }
+        ],
+        "description": "An extension to display a Bootstrap Carousel from a Bolt contenttype record",
+        "keywords": [
+            "Bootstrap",
+            "carousel",
+            "slider"
+        ],
+        "support": {
+            "source": "https://github.com/GawainLynch/bolt-extension-bootstrap-carousel/tree/v2.0.0",
+            "issues": "https://github.com/GawainLynch/bolt-extension-bootstrap-carousel/issues"
+        }
+    },
+    {
+        "name": "xiaohutai/bolt-theme-html5up-twenty",
+        "version": "0.2",
+        "version_normalized": "0.2.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/xiaohutai/bolt-theme-html5up-twenty.git",
+            "reference": "79781d6694cc81b4645481203ea0e6bc559cdf73"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/xiaohutai/bolt-theme-html5up-twenty/zipball/79781d6694cc81b4645481203ea0e6bc559cdf73",
+            "reference": "79781d6694cc81b4645481203ea0e6bc559cdf73",
+            "shasum": ""
+        },
+        "require": {
+            "bolt/bolt": ">=2.0.0,<3.0.0"
+        },
+        "time": "2014-10-24 08:02:35",
+        "type": "bolt-theme",
+        "extra": {
+            "bolt-screenshots": [
+                "preview.png"
+            ]
+        },
+        "installation-source": "dist",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Xiao-Hu Tai",
+                "email": "xiao@twokings.nl"
+            }
+        ],
+        "description": "Twenty by HTML5 UP adapted for Bolt",
+        "keywords": [
+            "html5UP",
+            "theme",
+            "twenty"
+        ],
+        "support": {
+            "source": "https://github.com/xiaohutai/bolt-theme-html5up-twenty/tree/0.2",
+            "issues": "https://github.com/xiaohutai/bolt-theme-html5up-twenty/issues"
+        }
+    }
+]

@@ -1,0 +1,27 @@
+{
+	"name" : "bolt/bootstrap-carousel",
+	"description" : "An extension to display a Bootstrap Carousel from a Bolt contenttype record",
+	"type" : "bolt-extension",
+	"keywords" : [
+		"Bootstrap",
+		"carousel",
+		"slider"
+	],
+	"require" : {
+		"bolt/bolt" : ">=2.0.0,<3.0.0"
+	},
+	"license" : "GPL-3.0+",
+	"authors" : [{
+			"name" : "Gawain Lynch",
+			"email" : "gawain.lynch@gmail.com"
+		}
+	],
+	"autoload" : {
+		"files" : [
+			"init.php"
+		],
+		"psr-4" : {
+			"Bolt\\Extension\\Bolt\\BootstrapCarousel\\" : ""
+		}
+	}
+}

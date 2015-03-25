@@ -1,0 +1,26 @@
+# This file defines the menus on the website. See the documentation for
+# details: http://docs.bolt.cm/menus
+
+main:
+  - label: Home
+    path: homepage
+    class: first
+  - label: About Us
+    path: page/5
+  - label: Get Involved
+    path: 
+    submenu:
+      - label: Donate
+        path: 
+      - label: Become a Sponsor
+        path:
+    path: 
+  - label: Events
+    path: 
+  - label: Blog
+    path: 
+  - label: News
+    path: 
+  - label: Contact
+    path: page/contact
+    class: last

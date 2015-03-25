@@ -1,0 +1,20 @@
+{% extends 'master.twig' %}
+
+
+
+{% block bodyclass %}index{% endblock %}
+
+{% block headerclass %}alt{% endblock %}
+
+        {% block banner %}
+            <section id="banner">
+               
+            </section>
+        {% endblock banner %}
+
+        {% block main %}
+        	 <section class="wrapper style1 container special">
+                {{ carousel('myslider') }}
+            </section>
+        {% endblock main%}
+
